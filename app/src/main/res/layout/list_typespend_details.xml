@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/lblMaLC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgDeleteLC"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgEdtLC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgEdtLC"
+        app:srcCompat="@drawable/ic_remove_circle_red_900_24dp" />
+
+    <ImageView
+        android:id="@+id/imgEdtLC"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblTenLC"
+        app:layout_constraintEnd_toStartOf="@+id/imgDeleteLC"
+        app:layout_constraintTop_toTopOf="@+id/lblTenLC"
+        app:srcCompat="@drawable/ic_mode_edit_indigo_a700_24dp" />
+
+    <TextView
+        android:id="@+id/lblTenLC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lblMaLC"
+        app:layout_constraintEnd_toStartOf="@+id/imgEdtLC"
+        app:layout_constraintStart_toEndOf="@+id/lblMaLC"
+        app:layout_constraintTop_toTopOf="@+id/lblMaLC" />
+</androidx.constraintlayout.widget.ConstraintLayout>

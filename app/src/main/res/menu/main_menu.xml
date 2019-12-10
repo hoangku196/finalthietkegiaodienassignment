@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mn_income"
+        android:title="Khoản thu" />
+    <item
+        android:id="@+id/mn_spend"
+        android:title="Khoản Chi" />
+    <item
+        android:id="@+id/mn_result"
+        android:title="Thống kê" />
+    <item
+        android:id="@+id/mn_introduce"
+        android:title="Giới thiệu" />
+    <item
+        android:id="@+id/mn_exit"
+        android:title="Thoát" />
+</menu>

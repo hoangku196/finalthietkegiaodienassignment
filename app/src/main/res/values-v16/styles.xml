@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="label">
+
+        <item name="android:textColor">#0097FC</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+    </style>
+
+    <style name="form">
+
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:fontFamily">monospace</item>
+
+    </style>
+
+    <style name="button">
+
+        <item name="android:textColor">#F30606</item>
+        <item name="android:background">#000</item>
+
+    </style>
+
+
+</resources>
