@@ -71,7 +71,7 @@ public class FragmentIncomeAdd extends Fragment {
         showSpinner(context);
 
         edtDateIncome = view.findViewById(R.id.edtDateIncome);
-        showDatePicker();
+        showDatePicker(context);
 
         edtMaKT = view.findViewById(R.id.edtMaKT);
         edtTenKT = view.findViewById(R.id.edtTenKT);
@@ -125,7 +125,7 @@ public class FragmentIncomeAdd extends Fragment {
         }
     }
 
-    private void showDatePicker() {
+    private void showDatePicker(final Context context) {
         edtDateIncome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,7 +133,7 @@ public class FragmentIncomeAdd extends Fragment {
                 int day = calendar.get(Calendar.DATE);
                 int month = calendar.get(Calendar.MONTH);
                 int year = calendar.get(Calendar.YEAR);
-                DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");

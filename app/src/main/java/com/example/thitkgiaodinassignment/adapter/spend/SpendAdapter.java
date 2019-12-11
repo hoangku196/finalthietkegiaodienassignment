@@ -141,7 +141,7 @@ public class SpendAdapter extends BaseAdapter {
             public void onClick(View v) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Xóa");
-                builder.setMessage("Bạn có muốn xóa khoản thu " + spend.getMaKC() + " ?");
+                builder.setMessage("Bạn có muốn xóa khoản chi " + spend.getMaKC() + " ?");
                 builder.setCancelable(false);
                 builder.setPositiveButton("Không", new DialogInterface.OnClickListener() {
                     @Override

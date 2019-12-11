@@ -92,7 +92,7 @@ public class TypeSpendAdapter extends BaseAdapter {
                         Toast.makeText(context, "Xóa thành công", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(context, "Xóa các khoản thu có loại thu này trước", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Xóa các khoản chi có loại chi này trước", Toast.LENGTH_SHORT).show();
                 }
             }
         });

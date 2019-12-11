@@ -59,6 +59,7 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         actionBar = getSupportActionBar();
         incomeDAO = new IncomeDAO(this);
+        spendDAO = new SpendDAO(this);
         bundle = getIntent().getExtras();
 
         String layout = bundle.getString("layout");

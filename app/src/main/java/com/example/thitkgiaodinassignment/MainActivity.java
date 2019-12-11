@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.thitkgiaodinassignment.dao.IncomeDAO;
 import com.example.thitkgiaodinassignment.fragment.income.FragmentIncomeMain;
+import com.example.thitkgiaodinassignment.fragment.result.FragmentResultMain;
 import com.example.thitkgiaodinassignment.fragment.spend.FragmentSpendMain;
 import com.example.thitkgiaodinassignment.object.income.KhoanThu;
 import com.example.thitkgiaodinassignment.object.income.LoaiThu;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        if (fragment!=null){
+        if (fragment != null) {
             fragmentTransaction.remove(fragment);
         }
         switch (item.getItemId()) {
@@ -68,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.mn_result:
                 actionBar.setTitle("Thống kê");
+                fragment = FragmentResultMain.newInstance();
+                fragmentTransaction.addToBackStack("Result Fragment");
                 break;
             case R.id.mn_introduce:
                 actionBar.setTitle("Giới thiệu");
@@ -85,10 +88,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (fragmentManager.getBackStackEntryCount()>0){
+        if (fragmentManager.getBackStackEntryCount() > 0) {
             fragmentManager.popBackStack();
-        }
-        else {
+        } else {
             super.onBackPressed();
         }
     }
