@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.thitkgiaodinassignment.dao.IncomeDAO;
 import com.example.thitkgiaodinassignment.fragment.income.FragmentIncomeMain;
+import com.example.thitkgiaodinassignment.fragment.introduce.FragmentIntroduceMain;
 import com.example.thitkgiaodinassignment.fragment.result.FragmentResultMain;
 import com.example.thitkgiaodinassignment.fragment.spend.FragmentSpendMain;
 import com.example.thitkgiaodinassignment.object.income.KhoanThu;
@@ -74,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.mn_introduce:
                 actionBar.setTitle("Giới thiệu");
+                fragment = FragmentIntroduceMain.newInstance();
+                fragmentTransaction.addToBackStack("Introduce Fragment");
                 break;
             case R.id.mn_exit:
                 System.exit(0);
