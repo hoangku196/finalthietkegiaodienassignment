@@ -160,7 +160,7 @@ public class FragmentSpendAdd extends Fragment {
                     String tenKC = edtTenKC.getText().toString();
                     String date = edtDateSpend.getText().toString();
                     double money = Double.parseDouble(edtMoneySpend.getText().toString());
-                    LoaiChi loaiChi = new LoaiChi(spTenLC.getSelectedItem().toString(), spendDAO.searchTenLCByMaLC(spTenLC.getSelectedItem().toString()));
+                    LoaiChi loaiChi = new LoaiChi(spendDAO.searchMaLCByTenLC(spTenLC.getSelectedItem().toString()), spTenLC.getSelectedItem().toString());
                     boolean check = spendDAO.insertNewSpend(new KhoanChi(maKC, tenKC, date, money, loaiChi));
                     if (check) {
                         Toast.makeText(getContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();

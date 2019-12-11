@@ -155,7 +155,8 @@ public class FragmentIncomeAdd extends Fragment {
                     String tenKT = edtTenKT.getText().toString();
                     String date = edtDateIncome.getText().toString();
                     double money = Double.parseDouble(edtMoneyIncome.getText().toString());
-                    LoaiThu loaiThu = new LoaiThu(spTenLT.getSelectedItem().toString(), incomeDAO.searchTenLTByMaLT(spTenLT.getSelectedItem().toString()));
+                    //todo: BUG
+                    LoaiThu loaiThu = new LoaiThu(incomeDAO.searchMaLTByTenLT(spTenLT.getSelectedItem().toString()), spTenLT.getSelectedItem().toString());
                     boolean check = incomeDAO.insertNewIncome(new KhoanThu(maKT, tenKT, date, money, loaiThu));
                     if (check) {
                         Toast.makeText(getContext(), "Thêm thành công", Toast.LENGTH_SHORT).show();

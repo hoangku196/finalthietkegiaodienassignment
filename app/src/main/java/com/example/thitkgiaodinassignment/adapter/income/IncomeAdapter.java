@@ -126,7 +126,7 @@ public class IncomeAdapter extends BaseAdapter {
                     lblMaKTInformation.setText(income.getMaKT());
                     lblTenKTInformation.setText(income.getTenKT());
                     lblMoneyKTInformation.setText(String.valueOf(income.getMoney()));
-                    lblTenLoaiThuInformation.setText(income.getLoaiThu().getMaLT());
+                    lblTenLoaiThuInformation.setText(incomeDAO.searchTenLTByMaLT(income.getLoaiThu().getMaLT()));
                     lblDateKTInformation.setText(income.getDate());
                 }
                 dialog.show();

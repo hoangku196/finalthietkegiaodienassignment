@@ -71,6 +71,19 @@ public class SpendDAO {
         return listNameTypeSpend;
     }
 
+    public String searchMaLCByTenLC(String tenLC) {
+        Cursor cursor = sqLiteDatabase.rawQuery("select maLC from LoaiChi where tenLC=?", new String[]{tenLC});
+        String maLC = null;
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            maLC = cursor.getString(0);
+
+            cursor.moveToNext();
+        }
+
+        return maLC;
+    }
+
     public String searchTenLCByMaLC(String maLC) {
         Cursor cursor = sqLiteDatabase.rawQuery("select tenLC from LoaiChi where maLC=?", new String[]{maLC});
         String tenLC = null;

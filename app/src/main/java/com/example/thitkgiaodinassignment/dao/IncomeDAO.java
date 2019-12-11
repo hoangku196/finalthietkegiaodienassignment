@@ -71,6 +71,19 @@ public class IncomeDAO {
         return listNameTypeIncome;
     }
 
+    public String searchMaLTByTenLT(String tenLT) {
+        Cursor cursor = sqLiteDatabase.rawQuery("select maLT from LoaiThu where tenLT=?", new String[]{tenLT});
+        String maLT = null;
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            maLT = cursor.getString(0);
+
+            cursor.moveToNext();
+        }
+
+        return maLT;
+    }
+
     public String searchTenLTByMaLT(String maLT) {
         Cursor cursor = sqLiteDatabase.rawQuery("select tenLT from LoaiThu where maLT=?", new String[]{maLT});
         String tenLT = null;
@@ -85,11 +98,11 @@ public class IncomeDAO {
     }
 
     public boolean checkLoaiThu(LoaiThu loaiThu) {
-        Cursor cursor = sqLiteDatabase.rawQuery("select maLT from KhoanThu where maLT=?", new String[]{loaiThu.getMaLT()});
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from KhoanThu where maLT=?", new String[]{loaiThu.getMaLT()});
         String maLT = null;
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            maLT = cursor.getString(0);
+            maLT = cursor.getString(2);
 
             cursor.moveToNext();
         }
